@@ -50,7 +50,7 @@ window.__ModuleLoader__.load({
     }
 
     const CSS = `
-.smn-root{--smn-line:var(--dsw-alias-border-l1);--smn-line-strong:var(--dsw-alias-border-l2);--smn-ink:var(--dsw-alias-label-primary);--smn-mute:var(--dsw-alias-label-secondary);--smn-fill:var(--dsw-alias-bg-layer-1);--smn-accent:var(--dsw-alias-brand-primary);font:inherit;color:var(--smn-ink);box-sizing:border-box}
+.smn-root{--smn-line:var(--dsw-alias-border-l1);--smn-line-strong:var(--dsw-alias-border-l2);--smn-ink:var(--dsw-alias-label-primary);--smn-mute:var(--dsw-alias-label-secondary);--smn-fill:var(--dsw-alias-bg-layer-1);--smn-accent:var(--dsw-static-blue-600,rgb(37,99,235));--smn-solid:var(--dsw-static-blue-600,rgb(37,99,235));--smn-solid-hover:var(--dsw-static-blue-800,rgb(30,64,175));font:inherit;color:var(--smn-ink);box-sizing:border-box}
 .smn-root *{box-sizing:border-box}
 .smn-root[data-mode="page"]{display:flex;flex-direction:column;width:100%;height:100%;min-height:0;overflow:hidden}
 .smn-root[data-mode="panel"]{display:block;width:100%}
@@ -69,27 +69,28 @@ window.__ModuleLoader__.load({
 .smn-root[data-mode="panel"] .smn-stack{max-width:none}
 .smn-card{display:flex;flex-direction:column;gap:12px;padding:16px;border:1px solid var(--smn-line);border-radius:10px;background:var(--smn-fill);min-width:0}
 .smn-card-primary{border-color:color-mix(in srgb,var(--smn-accent) 45%,transparent)}
-.smn-card-head{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}
+.smn-card-head{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .smn-card-titles{display:flex;flex-direction:column;gap:3px;min-width:0}
 .smn-card-title{font-size:.95em;font-weight:600}
 .smn-card-hint{font-size:.8em;line-height:1.55;color:var(--smn-mute)}
 .smn-lead{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
-.smn-input,.smn-select{height:32px;padding:0 10px;border-radius:8px;border:1px solid var(--smn-line-strong);background:var(--dsw-alias-bg-base);color:inherit;font:inherit;font-size:.9em;outline:none;min-width:0}
+.smn-input,.smn-select{height:32px;line-height:1.2;padding:0 10px;border-radius:8px;border:1px solid var(--smn-line-strong);background:var(--dsw-alias-bg-base);color:inherit;font:inherit;font-size:.9em;outline:none;min-width:0;box-sizing:border-box;vertical-align:middle}
+.smn-select{-webkit-appearance:none;appearance:none;padding-right:26px;background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath d='M2.5 4.5 6 8l3.5-3.5' fill='none' stroke='%23979da6' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 9px center;background-size:12px 12px;cursor:pointer}
 .smn-input::placeholder{color:var(--smn-mute)}
 .smn-input:focus,.smn-select:focus{border-color:var(--smn-accent)}
 .smn-input-lg{height:36px;flex:1 1 280px;font-size:.94em}
 .smn-time{width:112px;flex:none}
-.smn-btn{height:32px;padding:0 12px;border-radius:8px;border:1px solid var(--smn-line-strong);background:var(--dsw-alias-bg-base);color:var(--dsw-alias-label-primary);font:inherit;font-size:.88em;cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;gap:6px}
+.smn-btn{height:32px;padding:0 12px;border-radius:8px;border:1px solid var(--smn-line-strong);background:var(--dsw-alias-bg-base);color:var(--dsw-alias-label-primary);font:inherit;font-size:.88em;line-height:1;cursor:pointer;white-space:nowrap;display:inline-flex;align-items:center;justify-content:center;gap:6px;vertical-align:middle}
 .smn-btn:hover:not(:disabled){background:var(--dsw-alias-bg-layer-2);border-color:var(--dsw-alias-label-secondary)}
 .smn-btn:disabled{opacity:.45;cursor:default}
-.smn-btn-primary{background:var(--dsw-alias-brand-primary);border-color:var(--dsw-alias-brand-primary);color:#fff;font-weight:500}
-.smn-btn-primary:hover:not(:disabled){background:var(--dsw-alias-brand-primary);border-color:var(--dsw-alias-brand-primary);filter:brightness(1.1)}
+.smn-btn-primary{background:var(--smn-solid);border-color:var(--smn-solid);color:#fff;font-weight:500}
+.smn-btn-primary:hover:not(:disabled){background:var(--smn-solid-hover);border-color:var(--smn-solid-hover)}
 .smn-btn-lg{height:36px;padding:0 16px;font-size:.9em}
 .smn-btn-quiet{border-color:transparent;background:transparent;color:var(--smn-mute);padding:0 8px}
 .smn-btn-quiet:hover:not(:disabled){color:var(--smn-ink);background:var(--dsw-alias-bg-layer-2);border-color:transparent}
 .smn-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px 14px}
 .smn-field{display:flex;flex-direction:column;gap:5px;min-width:0}
-.smn-label{font-size:.8em;color:var(--smn-mute)}
+.smn-label{font-size:.8em;line-height:1.4;color:var(--smn-mute);display:block}
 .smn-row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
 .smn-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
 .smn-note{font-size:.8em;line-height:1.6;color:var(--smn-mute);word-break:break-word}
@@ -97,7 +98,7 @@ window.__ModuleLoader__.load({
 .smn-err{color:var(--dsw-alias-state-error-primary)}
 .smn-warn{color:var(--dsw-alias-state-warn-primary)}
 .smn-check{display:inline-flex;align-items:center;gap:7px;font-size:.82em;color:var(--smn-mute);cursor:pointer}
-.smn-check input[type="checkbox"]{accent-color:var(--dsw-alias-brand-primary);width:14px;height:14px;margin:0;cursor:pointer}
+.smn-check input[type="checkbox"]{accent-color:var(--smn-solid);width:14px;height:14px;margin:0;cursor:pointer}
 .smn-list{display:flex;flex-direction:column}
 .smn-item{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 0;border-top:1px solid var(--smn-line);min-width:0}
 .smn-item:first-child{border-top:0}
@@ -382,12 +383,6 @@ window.__ModuleLoader__.load({
             },
             h('option', { value: 'tls' }, 'SSL/TLS（465）'),
             h('option', { value: 'starttls' }, 'STARTTLS（587 / 25）'))),
-          h(Labeled, { label: 'SMTP 用户名（留空用绑定邮箱）' },
-            h(React.Fragment, null,
-              h('input', { className: 'smn-input', value: draft.smtpUser, onChange: set('smtpUser'), placeholder: '留空即用绑定邮箱', autoComplete: 'off', spellCheck: false }),
-              String(draft.smtpUser ?? '').trim() !== '' && !String(draft.smtpUser).includes('@')
-                ? h('span', { className: 'smn-note smn-warn' }, '要填完整邮箱地址（如 you@163.com），否则认证一定返回 535')
-                : null)),
           h(Labeled, { label: settings.hasPass ? 'SMTP 授权码（已保存，留空不改）' : 'SMTP 授权码' },
             h('input', {
               className: 'smn-input',
@@ -442,7 +437,6 @@ window.__ModuleLoader__.load({
             smtpHost: settings.smtpHost,
             smtpPort: String(settings.smtpPort),
             smtpSecure: settings.smtpSecure,
-            smtpUser: settings.smtpUser,
             smtpPass: '',
             notifyTo: settings.notifyTo,
             subjectPrefix: settings.subjectPrefix,
@@ -471,7 +465,7 @@ window.__ModuleLoader__.load({
           smtpHost: draft.smtpHost,
           smtpPort: Number.parseInt(draft.smtpPort, 10) || 465,
           smtpSecure: draft.smtpSecure,
-          smtpUser: draft.smtpUser,
+          smtpUser: '',
           smtpPass: draft.smtpPass,
           notifyTo: draft.notifyTo,
           subjectPrefix: draft.subjectPrefix,

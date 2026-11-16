@@ -78,7 +78,7 @@ DSH 会话任务汇报
 | 键 | 默认 | 说明 |
 | --- | --- | --- |
 | `enabled` | `true` | 总开关，关掉后完成事件不再发信 |
-| `bindEmail` / `smtpUser` / `smtpPass` | 空 | 发件邮箱、SMTP 用户名（留空＝绑定邮箱）、授权码 |
+| `bindEmail` / `smtpPass` | 空 | 发件邮箱、授权码（AUTH 用户名始终等于 `bindEmail`，无需单独填） |
 | `smtpHost` / `smtpPort` / `smtpSecure` | `smtp.163.com` / `465` / `true` | `secure` 为真走隐式 TLS，为假走 STARTTLS |
 | `notifyTo` | 空 | 汇报目标邮箱 |
 | `subjectPrefix` | `[DSH] 任务完成` | 主题前缀 |
