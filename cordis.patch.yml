@@ -1,0 +1,3 @@
+- insert:
+    - id: session-mail-notifier
+      name: '@local/session-mail-notifier'

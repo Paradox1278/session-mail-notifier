@@ -1,0 +1,7 @@
+{
+  "meta": {
+    "title": "Session completion email reports",
+    "description": "Watch a Session by its ID: every time it finishes a turn, the report is emailed to your target address from the mailbox you bound. Reports are structured as what happened / how it went / next steps, with token usage and duration attached, plus failure alerts, a retry queue, quiet hours and a daily digest. The authorization code stays in the local credential store and is never echoed back.",
+    "detail": "docs/DETAIL.md"
+  }
+}
